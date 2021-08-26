@@ -219,7 +219,7 @@ int main(int argc, char *argv[])
 
 	QObject::connect(&maquinaQML, &QQmlApplicationEngine::objectCreated, &app, [&](QObject *obj, const QUrl &objUrl) {
 		if (!obj && url == objUrl) {
-			QCoreApplication::exit(-1);
+			QCoreApplication::exit(codigoSalida);
 		} else {
 			// Guardar la referencia al objeto raiz de la interfaz de usuario creada en QML
 			_qmlRaiz = obj;
