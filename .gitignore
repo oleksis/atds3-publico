@@ -1,0 +1,7 @@
+.qmake.stash
+*.vcxproj.*
+atds3_resource.rc
+
+.vs/
+debug/
+release/

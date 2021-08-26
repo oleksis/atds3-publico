@@ -66,9 +66,7 @@ android {
 
 INCLUDEPATH += cabeceras
 
-unix: !android: QML_IMPORT_PATH += qml
-android: QML_IMPORT_PATH += c:/proyectos/atds3-1.6.0/qml
-windows: QML_IMPORT_PATH += c:/proyectos/atds3-1.6.0/qml
+QML_IMPORT_PATH += qml
 
 unix: !android: !macx {
 	INCLUDEPATH += /usr/include /usr/local/include
@@ -123,8 +121,8 @@ android {
 
 windows {
 	contains(QMAKE_HOST.arch, x86_64) {
-		INCLUDEPATH +=	C:/msys64/mingw64/include
-		LIBS += -LC:/msys64/mingw64/lib C:/msys64/mingw64/lib/libprotobuf.a
+		INCLUDEPATH +=	C:/Qt/vcpkg/installed/x64-windows/include
+		LIBS += -LC:/Qt/vcpkg/installed/x64-windows/lib -lprotobuf
 	} else {
 		DEFINES += PROTOBUF_USE_DLLS
 		INCLUDEPATH +=	C:/msys64/mingw32/include

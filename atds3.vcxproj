@@ -1,0 +1,1346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0BCEC2A2-CF67-3D84-B985-926E2093E8BF}</ProjectGuid>
+    <RootNamespace>atds3</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.19041.0</WindowsTargetPlatformMinVersion>
+  <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>atds3</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>atds3</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" /><Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')"><Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." /></Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" /><ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')"><Import Project="$(QtMsBuild)\qt_defaults.props" /></ImportGroup><PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"><OutDir>debug\</OutDir><IntDir>debug\</IntDir><TargetName>atds3</TargetName><IgnoreImportLibrary>true</IgnoreImportLibrary></PropertyGroup><PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"><OutDir>release\</OutDir><IntDir>release\</IntDir><TargetName>atds3</TargetName><IgnoreImportLibrary>true</IgnoreImportLibrary><LinkIncremental>false</LinkIncremental></PropertyGroup><PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"><QtInstall>5.15.2_msvc2019_64</QtInstall><QtModules>core;sql;network;gui;svg;multimedia;widgets;qml;websockets;quick;quickcontrols2</QtModules></PropertyGroup><PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'"><QtInstall>5.15.2_msvc2019_64</QtInstall><QtModules>core;sql;network;gui;svg;multimedia;widgets;qml;websockets;quick;quickcontrols2</QtModules></PropertyGroup><ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')"><Import Project="$(QtMsBuild)\qt.props" /></ImportGroup>
+  
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;cabeceras;C:\Qt\vcpkg\installed\x64-windows\include;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_QMLMODELS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    <MultiProcessorCompilation>true</MultiProcessorCompilation></ClCompile>
+    <Link>
+      <AdditionalDependencies>protobuf.lib;powrprof.lib;ssl.lib;crypto.lib;$(QTDIR)\lib\Qt5QmlModels.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\vcpkg\installed\x64-windows\lib;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\atds3.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>1.5</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;QT_NO_DEBUG;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_SVG_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_QMLMODELS_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  <QtMoc><CompilerFlavor>msvc</CompilerFlavor><Include>./$(Configuration)/moc_predefs.h</Include><ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription><DynamicSource>output</DynamicSource><QtMocDir>$(Configuration)</QtMocDir><QtMocFileName>moc_%(Filename).cpp</QtMocFileName></QtMoc><QtRcc><Compression>default</Compression><ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription><QtRccDir>$(Configuration)</QtRccDir><QtRccFileName>qrc_%(Filename).cpp</QtRccFileName></QtRcc></ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;cabeceras;C:\Qt\vcpkg\installed\x64-windows\include;debug;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_QMLMODELS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    <MultiProcessorCompilation>true</MultiProcessorCompilation></ClCompile>
+    <Link>
+      <AdditionalDependencies>protobuf.lib;powrprof.lib;ssl.lib;crypto.lib;$(QTDIR)\lib\Qt5QmlModelsd.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Qt\vcpkg\installed\x64-windows\lib;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\atds3.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>1.5</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_QUICKCONTROLS2_LIB;QT_QUICK_LIB;QT_SVG_LIB;QT_WIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_QMLMODELS_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SQL_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  <QtMoc><CompilerFlavor>msvc</CompilerFlavor><Include>./$(Configuration)/moc_predefs.h</Include><ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription><DynamicSource>output</DynamicSource><QtMocDir>$(Configuration)</QtMocDir><QtMocFileName>moc_%(Filename).cpp</QtMocFileName></QtMoc><QtRcc><Compression>default</Compression><ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription><QtRccDir>$(Configuration)</QtRccDir><QtRccFileName>qrc_%(Filename).cpp</QtRccFileName></QtRcc></ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="fuentes\configuraciones.cpp" />
+    <ClCompile Include="fuentes\http.cpp" />
+    <ClCompile Include="fuentes\main.cpp" />
+    <ClCompile Include="fuentes\modelocategorias.cpp" />
+    <ClCompile Include="fuentes\modeloiconocategorias.cpp" />
+    <ClCompile Include="fuentes\modelopaquetes.cpp" />
+    <ClCompile Include="fuentes\modelotareas.cpp" />
+    <ClCompile Include="fuentes\todus.cpp" />
+    <ClCompile Include="fuentes\todus.pb.cc" />
+    <ClCompile Include="fuentes\utiles.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="cabeceras\configuraciones.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+    <QtMoc Include="cabeceras\http.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+    <ClInclude Include="cabeceras\main.hpp" />
+    <QtMoc Include="cabeceras\modelocategorias.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+    <QtMoc Include="cabeceras\modeloiconocategorias.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+    <QtMoc Include="cabeceras\modelopaquetes.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+    <QtMoc Include="cabeceras\modelotareas.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+    <QtMoc Include="cabeceras\todus.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+    <ClInclude Include="cabeceras\todus.pb.h" />
+    <QtMoc Include="cabeceras\utiles.hpp">
+      
+      
+      
+      
+      
+      
+      
+      
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -std:c++17 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="qml\configuracion\apariencia\Apariencia.qml" />
+    <None Include="qml\configuracion\avanzadas\Avanzadas.qml" />
+    <None Include="qml\comun\BarraBotones.qml" />
+    <None Include="qml\principal\BotonesPaquetes.qml" />
+    <None Include="qml\principal\BotonesTransferencias.qml" />
+    <None Include="qml\principal\Categorias.qml" />
+    <None Include="qml\principal\CodigoVerificacion.qml" />
+    <None Include="qml\configuracion\Configuracion.qml" />
+    <None Include="qml\configuracion\descargas\Descargas.qml" />
+    <None Include="qml\principal\EditarCategoria.qml" />
+    <None Include="qml\comun\EntradaAreaTexto.qml" />
+    <None Include="qml\comun\EntradaLineaTexto.qml" />
+    <None Include="qml\principal\FalloInicioSesion.qml" />
+    <None Include="qml\configuracion\informacion\Informacion.qml" />
+    <None Include="qml\principal\MenuLateral.qml" />
+    <None Include="qml\configuracion\notificaciones\Notificacion.qml" />
+    <None Include="qml\configuracion\notificaciones\Notificaciones.qml" />
+    <None Include="qml\configuracion\todus\PPFInformacion.qml" />
+    <None Include="qml\principal\Paquetes.qml" />
+    <None Include="qml\principal\Principal.qml" />
+    <None Include="qml\configuracion\programacion\Programacion.qml" />
+    <None Include="qml\configuracion\proxy\Proxy.qml" />
+    <None Include="qml\configuracion\publicaciones\Publicaciones.qml" />
+    <None Include="qml\principal\PublicarContenido.qml" />
+    <None Include="qml\comun\Subtitulo.qml" />
+    <None Include="qml\comun\TextoMenuContextual.qml" />
+    <None Include="qml\configuracion\todus\Todus.qml" />
+    <None Include="qml\principal\VistaTarea.qml" />
+    <None Include="recursos\svg\ad.svg" />
+    <None Include="recursos\svg\address-book.svg" />
+    <None Include="recursos\svg\address-card.svg" />
+    <None Include="recursos\svg\adjust.svg" />
+    <None Include="recursos\svg\air-freshener.svg" />
+    <None Include="recursos\svg\align-center.svg" />
+    <None Include="recursos\svg\align-justify.svg" />
+    <None Include="recursos\svg\align-left.svg" />
+    <None Include="recursos\svg\align-right.svg" />
+    <None Include="recursos\svg\allergies.svg" />
+    <None Include="recursos\svg\ambulance.svg" />
+    <None Include="recursos\svg\american-sign-language-interpreting.svg" />
+    <None Include="recursos\svg\anchor.svg" />
+    <None Include="recursos\svg\angle-double-down.svg" />
+    <None Include="recursos\svg\angle-double-left.svg" />
+    <None Include="recursos\svg\angle-double-right.svg" />
+    <None Include="recursos\svg\angle-double-up.svg" />
+    <None Include="recursos\svg\angle-down.svg" />
+    <None Include="recursos\svg\angle-left.svg" />
+    <None Include="recursos\svg\angle-right.svg" />
+    <None Include="recursos\svg\angle-up.svg" />
+    <None Include="recursos\svg\angry.svg" />
+    <None Include="recursos\svg\ankh.svg" />
+    <None Include="recursos\svg\apple-alt.svg" />
+    <None Include="recursos\svg\archive.svg" />
+    <None Include="recursos\svg\archway.svg" />
+    <None Include="recursos\svg\arrow-alt-circle-down.svg" />
+    <None Include="recursos\svg\arrow-alt-circle-left.svg" />
+    <None Include="recursos\svg\arrow-alt-circle-right.svg" />
+    <None Include="recursos\svg\arrow-alt-circle-up.svg" />
+    <None Include="recursos\svg\arrow-circle-down.svg" />
+    <None Include="recursos\svg\arrow-circle-left.svg" />
+    <None Include="recursos\svg\arrow-circle-right.svg" />
+    <None Include="recursos\svg\arrow-circle-up.svg" />
+    <None Include="recursos\svg\arrow-down.svg" />
+    <None Include="recursos\svg\arrow-left.svg" />
+    <None Include="recursos\svg\arrow-right.svg" />
+    <None Include="recursos\svg\arrow-up.svg" />
+    <None Include="recursos\svg\arrows-alt-h.svg" />
+    <None Include="recursos\svg\arrows-alt-v.svg" />
+    <None Include="recursos\svg\arrows-alt.svg" />
+    <None Include="recursos\svg\assistive-listening-systems.svg" />
+    <None Include="recursos\svg\asterisk.svg" />
+    <None Include="recursos\svg\at.svg" />
+    <None Include="recursos\ico\atds3.ico" />
+    <None Include="recursos\png\atds3.png" />
+    <None Include="qml\atds3.qmlproject" />
+    <None Include="qml\atds3.qml" />
+    <None Include="recursos\svg\atds3.svg" />
+    <None Include="recursos\svg\atlas.svg" />
+    <None Include="recursos\svg\atom.svg" />
+    <None Include="recursos\svg\audio-description.svg" />
+    <None Include="recursos\svg\award.svg" />
+    <None Include="recursos\svg\baby-carriage.svg" />
+    <None Include="recursos\svg\baby.svg" />
+    <None Include="recursos\svg\backspace.svg" />
+    <None Include="recursos\svg\backward.svg" />
+    <None Include="recursos\svg\bacon.svg" />
+    <None Include="recursos\svg\bacteria.svg" />
+    <None Include="recursos\svg\bacterium.svg" />
+    <None Include="recursos\svg\bahai.svg" />
+    <None Include="recursos\svg\balance-scale-left.svg" />
+    <None Include="recursos\svg\balance-scale-right.svg" />
+    <None Include="recursos\svg\balance-scale.svg" />
+    <None Include="recursos\svg\ban.svg" />
+    <None Include="recursos\svg\band-aid.svg" />
+    <None Include="recursos\svg\barcode.svg" />
+    <None Include="recursos\svg\bars.svg" />
+    <None Include="recursos\svg\baseball-ball.svg" />
+    <None Include="recursos\svg\basketball-ball.svg" />
+    <None Include="recursos\svg\bath.svg" />
+    <None Include="recursos\svg\battery-empty.svg" />
+    <None Include="recursos\svg\battery-full.svg" />
+    <None Include="recursos\svg\battery-half.svg" />
+    <None Include="recursos\svg\battery-quarter.svg" />
+    <None Include="recursos\svg\battery-three-quarters.svg" />
+    <None Include="recursos\svg\bed.svg" />
+    <None Include="recursos\svg\beer.svg" />
+    <None Include="recursos\svg\bell-slash.svg" />
+    <None Include="recursos\svg\bell.svg" />
+    <None Include="recursos\svg\bezier-curve.svg" />
+    <None Include="recursos\svg\bible.svg" />
+    <None Include="recursos\svg\bicycle.svg" />
+    <None Include="recursos\svg\biking.svg" />
+    <None Include="recursos\svg\binoculars.svg" />
+    <None Include="recursos\svg\biohazard.svg" />
+    <None Include="recursos\svg\birthday-cake.svg" />
+    <None Include="recursos\svg\blender-phone.svg" />
+    <None Include="recursos\svg\blender.svg" />
+    <None Include="recursos\svg\blind.svg" />
+    <None Include="recursos\svg\blog.svg" />
+    <None Include="recursos\svg\bold.svg" />
+    <None Include="recursos\svg\bolt.svg" />
+    <None Include="recursos\svg\bomb.svg" />
+    <None Include="recursos\svg\bone.svg" />
+    <None Include="recursos\svg\bong.svg" />
+    <None Include="recursos\svg\book-dead.svg" />
+    <None Include="recursos\svg\book-medical.svg" />
+    <None Include="recursos\svg\book-open.svg" />
+    <None Include="recursos\svg\book-reader.svg" />
+    <None Include="recursos\svg\book.svg" />
+    <None Include="recursos\svg\bookmark.svg" />
+    <None Include="recursos\svg\border-all.svg" />
+    <None Include="recursos\svg\border-none.svg" />
+    <None Include="recursos\svg\border-style.svg" />
+    <None Include="recursos\svg\bowling-ball.svg" />
+    <None Include="recursos\svg\box-open.svg" />
+    <None Include="recursos\svg\box-tissue.svg" />
+    <None Include="recursos\svg\box.svg" />
+    <None Include="recursos\svg\boxes.svg" />
+    <None Include="recursos\svg\braille.svg" />
+    <None Include="recursos\svg\brain.svg" />
+    <None Include="recursos\svg\bread-slice.svg" />
+    <None Include="recursos\svg\briefcase-medical.svg" />
+    <None Include="recursos\svg\briefcase.svg" />
+    <None Include="recursos\svg\broadcast-tower.svg" />
+    <None Include="recursos\svg\broom.svg" />
+    <None Include="recursos\svg\brush.svg" />
+    <None Include="recursos\svg\bug.svg" />
+    <None Include="recursos\svg\building.svg" />
+    <None Include="recursos\svg\bullhorn.svg" />
+    <None Include="recursos\svg\bullseye.svg" />
+    <None Include="recursos\svg\burn.svg" />
+    <None Include="recursos\svg\bus-alt.svg" />
+    <None Include="recursos\svg\bus.svg" />
+    <None Include="recursos\svg\business-time.svg" />
+    <None Include="recursos\svg\calculator.svg" />
+    <None Include="recursos\svg\calendar-alt.svg" />
+    <None Include="recursos\svg\calendar-check.svg" />
+    <None Include="recursos\svg\calendar-day.svg" />
+    <None Include="recursos\svg\calendar-minus.svg" />
+    <None Include="recursos\svg\calendar-plus.svg" />
+    <None Include="recursos\svg\calendar-times.svg" />
+    <None Include="recursos\svg\calendar-week.svg" />
+    <None Include="recursos\svg\calendar.svg" />
+    <None Include="recursos\svg\camera-retro.svg" />
+    <None Include="recursos\svg\camera.svg" />
+    <None Include="recursos\svg\campground.svg" />
+    <None Include="recursos\svg\candy-cane.svg" />
+    <None Include="recursos\svg\cannabis.svg" />
+    <None Include="recursos\svg\capsules.svg" />
+    <None Include="recursos\svg\car-alt.svg" />
+    <None Include="recursos\svg\car-battery.svg" />
+    <None Include="recursos\svg\car-crash.svg" />
+    <None Include="recursos\svg\car-side.svg" />
+    <None Include="recursos\svg\car.svg" />
+    <None Include="recursos\svg\caravan.svg" />
+    <None Include="recursos\svg\caret-down.svg" />
+    <None Include="recursos\svg\caret-left.svg" />
+    <None Include="recursos\svg\caret-right.svg" />
+    <None Include="recursos\svg\caret-square-down.svg" />
+    <None Include="recursos\svg\caret-square-left.svg" />
+    <None Include="recursos\svg\caret-square-right.svg" />
+    <None Include="recursos\svg\caret-square-up.svg" />
+    <None Include="recursos\svg\caret-up.svg" />
+    <None Include="recursos\svg\carrot.svg" />
+    <None Include="recursos\svg\cart-arrow-down.svg" />
+    <None Include="recursos\svg\cart-plus.svg" />
+    <None Include="recursos\svg\cash-register.svg" />
+    <None Include="recursos\svg\cat.svg" />
+    <None Include="recursos\svg\certificate.svg" />
+    <None Include="recursos\svg\chair.svg" />
+    <None Include="recursos\svg\chalkboard-teacher.svg" />
+    <None Include="recursos\svg\chalkboard.svg" />
+    <None Include="recursos\svg\charging-station.svg" />
+    <None Include="recursos\svg\chart-area.svg" />
+    <None Include="recursos\svg\chart-bar.svg" />
+    <None Include="recursos\svg\chart-line.svg" />
+    <None Include="recursos\svg\chart-pie.svg" />
+    <None Include="recursos\svg\check-circle.svg" />
+    <None Include="recursos\svg\check-double.svg" />
+    <None Include="recursos\svg\check-square.svg" />
+    <None Include="recursos\svg\check.svg" />
+    <None Include="recursos\svg\cheese.svg" />
+    <None Include="recursos\svg\chess-bishop.svg" />
+    <None Include="recursos\svg\chess-board.svg" />
+    <None Include="recursos\svg\chess-king.svg" />
+    <None Include="recursos\svg\chess-knight.svg" />
+    <None Include="recursos\svg\chess-pawn.svg" />
+    <None Include="recursos\svg\chess-queen.svg" />
+    <None Include="recursos\svg\chess-rook.svg" />
+    <None Include="recursos\svg\chess.svg" />
+    <None Include="recursos\svg\chevron-circle-down.svg" />
+    <None Include="recursos\svg\chevron-circle-left.svg" />
+    <None Include="recursos\svg\chevron-circle-right.svg" />
+    <None Include="recursos\svg\chevron-circle-up.svg" />
+    <None Include="recursos\svg\chevron-down.svg" />
+    <None Include="recursos\svg\chevron-left.svg" />
+    <None Include="recursos\svg\chevron-right.svg" />
+    <None Include="recursos\svg\chevron-up.svg" />
+    <None Include="recursos\svg\child.svg" />
+    <None Include="recursos\svg\church.svg" />
+    <None Include="recursos\svg\circle-notch.svg" />
+    <None Include="recursos\svg\circle.svg" />
+    <None Include="recursos\svg\city.svg" />
+    <None Include="recursos\svg\clinic-medical.svg" />
+    <None Include="recursos\svg\clipboard-check.svg" />
+    <None Include="recursos\svg\clipboard-list.svg" />
+    <None Include="recursos\svg\clipboard.svg" />
+    <None Include="recursos\svg\clock.svg" />
+    <None Include="recursos\svg\clone.svg" />
+    <None Include="recursos\svg\closed-captioning.svg" />
+    <None Include="recursos\svg\cloud-download-alt.svg" />
+    <None Include="recursos\svg\cloud-meatball.svg" />
+    <None Include="recursos\svg\cloud-moon-rain.svg" />
+    <None Include="recursos\svg\cloud-moon.svg" />
+    <None Include="recursos\svg\cloud-rain.svg" />
+    <None Include="recursos\svg\cloud-showers-heavy.svg" />
+    <None Include="recursos\svg\cloud-sun-rain.svg" />
+    <None Include="recursos\svg\cloud-sun.svg" />
+    <None Include="recursos\svg\cloud-upload-alt.svg" />
+    <None Include="recursos\svg\cloud.svg" />
+    <None Include="recursos\svg\cocktail.svg" />
+    <None Include="recursos\svg\code-branch.svg" />
+    <None Include="recursos\svg\code.svg" />
+    <None Include="recursos\svg\coffee.svg" />
+    <None Include="recursos\svg\cog.svg" />
+    <None Include="recursos\svg\cogs.svg" />
+    <None Include="recursos\svg\coins.svg" />
+    <None Include="recursos\svg\columns.svg" />
+    <None Include="recursos\svg\comment-alt.svg" />
+    <None Include="recursos\svg\comment-dollar.svg" />
+    <None Include="recursos\svg\comment-dots.svg" />
+    <None Include="recursos\svg\comment-medical.svg" />
+    <None Include="recursos\svg\comment-slash.svg" />
+    <None Include="recursos\svg\comment.svg" />
+    <None Include="recursos\svg\comments-dollar.svg" />
+    <None Include="recursos\svg\comments.svg" />
+    <None Include="recursos\svg\compact-disc.svg" />
+    <None Include="recursos\svg\compass.svg" />
+    <None Include="recursos\svg\compress-alt.svg" />
+    <None Include="recursos\svg\compress-arrows-alt.svg" />
+    <None Include="recursos\svg\compress.svg" />
+    <None Include="recursos\svg\concierge-bell.svg" />
+    <None Include="recursos\mp3\encantado\conexion-disponible-todus.mp3" />
+    <None Include="recursos\mp3\encantado\conexion-perdida-todus.mp3" />
+    <None Include="recursos\svg\cookie-bite.svg" />
+    <None Include="recursos\svg\cookie.svg" />
+    <None Include="recursos\svg\copy.svg" />
+    <None Include="recursos\svg\copyright.svg" />
+    <None Include="recursos\svg\couch.svg" />
+    <None Include="recursos\svg\credit-card.svg" />
+    <None Include="recursos\svg\crop-alt.svg" />
+    <None Include="recursos\svg\crop.svg" />
+    <None Include="recursos\svg\cross.svg" />
+    <None Include="recursos\svg\crosshairs.svg" />
+    <None Include="recursos\svg\crow.svg" />
+    <None Include="recursos\svg\crown.svg" />
+    <None Include="recursos\svg\crutch.svg" />
+    <None Include="recursos\svg\cube.svg" />
+    <None Include="recursos\svg\cubes.svg" />
+    <None Include="recursos\svg\cut.svg" />
+    <None Include="recursos\svg\database.svg" />
+    <None Include="recursos\svg\deaf.svg" />
+    <None Include="recursos\svg\democrat.svg" />
+    <None Include="recursos\svg\desktop.svg" />
+    <None Include="recursos\svg\dharmachakra.svg" />
+    <None Include="recursos\svg\diagnoses.svg" />
+    <None Include="recursos\svg\dice-d20.svg" />
+    <None Include="recursos\svg\dice-d6.svg" />
+    <None Include="recursos\svg\dice-five.svg" />
+    <None Include="recursos\svg\dice-four.svg" />
+    <None Include="recursos\svg\dice-one.svg" />
+    <None Include="recursos\svg\dice-six.svg" />
+    <None Include="recursos\svg\dice-three.svg" />
+    <None Include="recursos\svg\dice-two.svg" />
+    <None Include="recursos\svg\dice.svg" />
+    <None Include="recursos\svg\digital-tachograph.svg" />
+    <None Include="recursos\svg\directions.svg" />
+    <None Include="recursos\svg\disease.svg" />
+    <None Include="recursos\svg\divide.svg" />
+    <None Include="recursos\svg\dizzy.svg" />
+    <None Include="recursos\svg\dna.svg" />
+    <None Include="recursos\svg\dog.svg" />
+    <None Include="recursos\svg\dollar-sign.svg" />
+    <None Include="recursos\svg\dolly-flatbed.svg" />
+    <None Include="recursos\svg\dolly.svg" />
+    <None Include="recursos\svg\donate.svg" />
+    <None Include="recursos\svg\door-closed.svg" />
+    <None Include="recursos\svg\door-open.svg" />
+    <None Include="recursos\svg\dot-circle.svg" />
+    <None Include="recursos\svg\dove.svg" />
+    <None Include="recursos\svg\download.svg" />
+    <None Include="recursos\svg\drafting-compass.svg" />
+    <None Include="recursos\svg\dragon.svg" />
+    <None Include="recursos\svg\draw-polygon.svg" />
+    <None Include="recursos\svg\drum-steelpan.svg" />
+    <None Include="recursos\svg\drum.svg" />
+    <None Include="recursos\svg\drumstick-bite.svg" />
+    <None Include="recursos\svg\dumbbell.svg" />
+    <None Include="recursos\svg\dumpster-fire.svg" />
+    <None Include="recursos\svg\dumpster.svg" />
+    <None Include="recursos\svg\dungeon.svg" />
+    <None Include="recursos\svg\edit.svg" />
+    <None Include="recursos\svg\egg.svg" />
+    <None Include="recursos\svg\eject.svg" />
+    <None Include="recursos\svg\ellipsis-h.svg" />
+    <None Include="recursos\svg\ellipsis-v.svg" />
+    <None Include="recursos\svg\envelope-open-text.svg" />
+    <None Include="recursos\svg\envelope-open.svg" />
+    <None Include="recursos\svg\envelope-square.svg" />
+    <None Include="recursos\svg\envelope.svg" />
+    <None Include="recursos\svg\equals.svg" />
+    <None Include="recursos\svg\eraser.svg" />
+    <None Include="recursos\svg\ethernet.svg" />
+    <None Include="recursos\svg\euro-sign.svg" />
+    <None Include="recursos\svg\exchange-alt.svg" />
+    <None Include="recursos\svg\exclamation-circle.svg" />
+    <None Include="recursos\svg\exclamation-triangle.svg" />
+    <None Include="recursos\svg\exclamation.svg" />
+    <None Include="recursos\svg\expand-alt.svg" />
+    <None Include="recursos\svg\expand-arrows-alt.svg" />
+    <None Include="recursos\svg\expand.svg" />
+    <None Include="recursos\svg\external-link-alt.svg" />
+    <None Include="recursos\svg\external-link-square-alt.svg" />
+    <None Include="recursos\svg\eye-dropper.svg" />
+    <None Include="recursos\svg\eye-slash.svg" />
+    <None Include="recursos\svg\eye.svg" />
+    <None Include="recursos\svg\fan.svg" />
+    <None Include="recursos\svg\fast-backward.svg" />
+    <None Include="recursos\svg\fast-forward.svg" />
+    <None Include="recursos\svg\faucet.svg" />
+    <None Include="recursos\svg\fax.svg" />
+    <None Include="recursos\svg\feather-alt.svg" />
+    <None Include="recursos\svg\feather.svg" />
+    <None Include="recursos\svg\female.svg" />
+    <None Include="recursos\svg\fighter-jet.svg" />
+    <None Include="recursos\svg\file-alt.svg" />
+    <None Include="recursos\svg\file-archive.svg" />
+    <None Include="recursos\svg\file-audio.svg" />
+    <None Include="recursos\svg\file-code.svg" />
+    <None Include="recursos\svg\file-contract.svg" />
+    <None Include="recursos\svg\file-csv.svg" />
+    <None Include="recursos\svg\file-download.svg" />
+    <None Include="recursos\svg\file-excel.svg" />
+    <None Include="recursos\svg\file-export.svg" />
+    <None Include="recursos\svg\file-image.svg" />
+    <None Include="recursos\svg\file-import.svg" />
+    <None Include="recursos\svg\file-invoice-dollar.svg" />
+    <None Include="recursos\svg\file-invoice.svg" />
+    <None Include="recursos\svg\file-medical-alt.svg" />
+    <None Include="recursos\svg\file-medical.svg" />
+    <None Include="recursos\svg\file-pdf.svg" />
+    <None Include="recursos\svg\file-powerpoint.svg" />
+    <None Include="recursos\svg\file-prescription.svg" />
+    <None Include="recursos\svg\file-signature.svg" />
+    <None Include="recursos\svg\file-upload.svg" />
+    <None Include="recursos\svg\file-video.svg" />
+    <None Include="recursos\svg\file-word.svg" />
+    <None Include="recursos\svg\file.svg" />
+    <None Include="recursos\svg\fill-drip.svg" />
+    <None Include="recursos\svg\fill.svg" />
+    <None Include="recursos\svg\film.svg" />
+    <None Include="recursos\svg\filter.svg" />
+    <None Include="recursos\mp3\encantado\finalizacion-erronea-paquete.mp3" />
+    <None Include="recursos\mp3\encantado\finalizacion-erronea-tarea.mp3" />
+    <None Include="recursos\mp3\encantado\finalizacion-exitosa-paquete.mp3" />
+    <None Include="recursos\mp3\encantado\finalizacion-exitosa-tarea.mp3" />
+    <None Include="recursos\svg\fingerprint.svg" />
+    <None Include="recursos\svg\fire-alt.svg" />
+    <None Include="recursos\svg\fire-extinguisher.svg" />
+    <None Include="recursos\svg\fire.svg" />
+    <None Include="recursos\svg\first-aid.svg" />
+    <None Include="recursos\svg\fish.svg" />
+    <None Include="recursos\svg\fist-raised.svg" />
+    <None Include="recursos\svg\flag-checkered.svg" />
+    <None Include="recursos\svg\flag-usa.svg" />
+    <None Include="recursos\svg\flag.svg" />
+    <None Include="recursos\svg\flask.svg" />
+    <None Include="recursos\svg\flushed.svg" />
+    <None Include="recursos\svg\folder-minus.svg" />
+    <None Include="recursos\svg\folder-open.svg" />
+    <None Include="recursos\svg\folder-plus.svg" />
+    <None Include="recursos\svg\folder.svg" />
+    <None Include="recursos\svg\font-awesome-logo-full.svg" />
+    <None Include="recursos\svg\font.svg" />
+    <None Include="recursos\svg\football-ball.svg" />
+    <None Include="recursos\svg\forward.svg" />
+    <None Include="recursos\svg\frog.svg" />
+    <None Include="recursos\svg\frown-open.svg" />
+    <None Include="recursos\svg\frown.svg" />
+    <None Include="recursos\svg\funnel-dollar.svg" />
+    <None Include="recursos\svg\futbol.svg" />
+    <None Include="recursos\svg\gamepad.svg" />
+    <None Include="recursos\svg\gas-pump.svg" />
+    <None Include="recursos\svg\gavel.svg" />
+    <None Include="recursos\svg\gem.svg" />
+    <None Include="recursos\svg\genderless.svg" />
+    <None Include="recursos\svg\ghost.svg" />
+    <None Include="recursos\svg\gift.svg" />
+    <None Include="recursos\svg\gifts.svg" />
+    <None Include="recursos\svg\glass-cheers.svg" />
+    <None Include="recursos\svg\glass-martini-alt.svg" />
+    <None Include="recursos\svg\glass-martini.svg" />
+    <None Include="recursos\svg\glass-whiskey.svg" />
+    <None Include="recursos\svg\glasses.svg" />
+    <None Include="recursos\svg\globe-africa.svg" />
+    <None Include="recursos\svg\globe-americas.svg" />
+    <None Include="recursos\svg\globe-asia.svg" />
+    <None Include="recursos\svg\globe-europe.svg" />
+    <None Include="recursos\svg\globe.svg" />
+    <None Include="recursos\svg\golf-ball.svg" />
+    <None Include="recursos\svg\gopuram.svg" />
+    <None Include="recursos\svg\graduation-cap.svg" />
+    <None Include="recursos\svg\greater-than-equal.svg" />
+    <None Include="recursos\svg\greater-than.svg" />
+    <None Include="recursos\svg\grimace.svg" />
+    <None Include="recursos\svg\grin-alt.svg" />
+    <None Include="recursos\svg\grin-beam-sweat.svg" />
+    <None Include="recursos\svg\grin-beam.svg" />
+    <None Include="recursos\svg\grin-hearts.svg" />
+    <None Include="recursos\svg\grin-squint-tears.svg" />
+    <None Include="recursos\svg\grin-squint.svg" />
+    <None Include="recursos\svg\grin-stars.svg" />
+    <None Include="recursos\svg\grin-tears.svg" />
+    <None Include="recursos\svg\grin-tongue-squint.svg" />
+    <None Include="recursos\svg\grin-tongue-wink.svg" />
+    <None Include="recursos\svg\grin-tongue.svg" />
+    <None Include="recursos\svg\grin-wink.svg" />
+    <None Include="recursos\svg\grin.svg" />
+    <None Include="recursos\svg\grip-horizontal.svg" />
+    <None Include="recursos\svg\grip-lines-vertical.svg" />
+    <None Include="recursos\svg\grip-lines.svg" />
+    <None Include="recursos\svg\grip-vertical.svg" />
+    <None Include="recursos\svg\guitar.svg" />
+    <None Include="recursos\svg\h-square.svg" />
+    <None Include="recursos\svg\hamburger.svg" />
+    <None Include="recursos\svg\hammer.svg" />
+    <None Include="recursos\svg\hamsa.svg" />
+    <None Include="recursos\svg\hand-holding-heart.svg" />
+    <None Include="recursos\svg\hand-holding-medical.svg" />
+    <None Include="recursos\svg\hand-holding-usd.svg" />
+    <None Include="recursos\svg\hand-holding-water.svg" />
+    <None Include="recursos\svg\hand-holding.svg" />
+    <None Include="recursos\svg\hand-lizard.svg" />
+    <None Include="recursos\svg\hand-middle-finger.svg" />
+    <None Include="recursos\svg\hand-paper.svg" />
+    <None Include="recursos\svg\hand-peace.svg" />
+    <None Include="recursos\svg\hand-point-down.svg" />
+    <None Include="recursos\svg\hand-point-left.svg" />
+    <None Include="recursos\svg\hand-point-right.svg" />
+    <None Include="recursos\svg\hand-point-up.svg" />
+    <None Include="recursos\svg\hand-pointer.svg" />
+    <None Include="recursos\svg\hand-rock.svg" />
+    <None Include="recursos\svg\hand-scissors.svg" />
+    <None Include="recursos\svg\hand-sparkles.svg" />
+    <None Include="recursos\svg\hand-spock.svg" />
+    <None Include="recursos\svg\hands-helping.svg" />
+    <None Include="recursos\svg\hands-wash.svg" />
+    <None Include="recursos\svg\hands.svg" />
+    <None Include="recursos\svg\handshake-alt-slash.svg" />
+    <None Include="recursos\svg\handshake-slash.svg" />
+    <None Include="recursos\svg\handshake.svg" />
+    <None Include="recursos\svg\hanukiah.svg" />
+    <None Include="recursos\svg\hard-hat.svg" />
+    <None Include="recursos\svg\hashtag.svg" />
+    <None Include="recursos\svg\hat-cowboy-side.svg" />
+    <None Include="recursos\svg\hat-cowboy.svg" />
+    <None Include="recursos\svg\hat-wizard.svg" />
+    <None Include="recursos\svg\hdd.svg" />
+    <None Include="recursos\svg\head-side-cough-slash.svg" />
+    <None Include="recursos\svg\head-side-cough.svg" />
+    <None Include="recursos\svg\head-side-mask.svg" />
+    <None Include="recursos\svg\head-side-virus.svg" />
+    <None Include="recursos\svg\heading.svg" />
+    <None Include="recursos\svg\headphones-alt.svg" />
+    <None Include="recursos\svg\headphones.svg" />
+    <None Include="recursos\svg\headset.svg" />
+    <None Include="recursos\svg\heart-broken.svg" />
+    <None Include="recursos\svg\heart.svg" />
+    <None Include="recursos\svg\heartbeat.svg" />
+    <None Include="recursos\svg\helicopter.svg" />
+    <None Include="recursos\svg\highlighter.svg" />
+    <None Include="recursos\svg\hiking.svg" />
+    <None Include="recursos\svg\hippo.svg" />
+    <None Include="recursos\svg\history.svg" />
+    <None Include="recursos\svg\hockey-puck.svg" />
+    <None Include="recursos\svg\holly-berry.svg" />
+    <None Include="recursos\svg\home.svg" />
+    <None Include="recursos\svg\horse-head.svg" />
+    <None Include="recursos\svg\horse.svg" />
+    <None Include="recursos\svg\hospital-alt.svg" />
+    <None Include="recursos\svg\hospital-symbol.svg" />
+    <None Include="recursos\svg\hospital-user.svg" />
+    <None Include="recursos\svg\hospital.svg" />
+    <None Include="recursos\svg\hot-tub.svg" />
+    <None Include="recursos\svg\hotdog.svg" />
+    <None Include="recursos\svg\hotel.svg" />
+    <None Include="recursos\svg\hourglass-end.svg" />
+    <None Include="recursos\svg\hourglass-half.svg" />
+    <None Include="recursos\svg\hourglass-start.svg" />
+    <None Include="recursos\svg\hourglass.svg" />
+    <None Include="recursos\svg\house-damage.svg" />
+    <None Include="recursos\svg\house-user.svg" />
+    <None Include="recursos\svg\hryvnia.svg" />
+    <None Include="recursos\svg\i-cursor.svg" />
+    <None Include="recursos\svg\ice-cream.svg" />
+    <None Include="recursos\svg\icicles.svg" />
+    <None Include="recursos\svg\icons.svg" />
+    <None Include="recursos\svg\id-badge.svg" />
+    <None Include="recursos\svg\id-card-alt.svg" />
+    <None Include="recursos\svg\id-card.svg" />
+    <None Include="recursos\svg\igloo.svg" />
+    <None Include="recursos\svg\image.svg" />
+    <None Include="recursos\svg\images.svg" />
+    <None Include="recursos\svg\inbox.svg" />
+    <None Include="recursos\mp3\encantado\incializacion-paquete.mp3" />
+    <None Include="recursos\mp3\encantado\incializacion-tarea.mp3" />
+    <None Include="recursos\svg\indent.svg" />
+    <None Include="recursos\svg\industry.svg" />
+    <None Include="recursos\svg\infinity.svg" />
+    <None Include="recursos\svg\info-circle.svg" />
+    <None Include="recursos\svg\info.svg" />
+    <None Include="recursos\svg\italic.svg" />
+    <None Include="recursos\svg\jedi.svg" />
+    <None Include="recursos\svg\joint.svg" />
+    <None Include="recursos\svg\journal-whills.svg" />
+    <None Include="recursos\svg\kaaba.svg" />
+    <None Include="recursos\svg\key.svg" />
+    <None Include="recursos\svg\keyboard.svg" />
+    <None Include="recursos\svg\khanda.svg" />
+    <None Include="recursos\svg\kiss-beam.svg" />
+    <None Include="recursos\svg\kiss-wink-heart.svg" />
+    <None Include="recursos\svg\kiss.svg" />
+    <None Include="recursos\svg\kiwi-bird.svg" />
+    <None Include="recursos\svg\landmark.svg" />
+    <None Include="recursos\svg\language.svg" />
+    <None Include="recursos\svg\laptop-code.svg" />
+    <None Include="recursos\svg\laptop-house.svg" />
+    <None Include="recursos\svg\laptop-medical.svg" />
+    <None Include="recursos\svg\laptop.svg" />
+    <None Include="recursos\svg\laugh-beam.svg" />
+    <None Include="recursos\svg\laugh-squint.svg" />
+    <None Include="recursos\svg\laugh-wink.svg" />
+    <None Include="recursos\svg\laugh.svg" />
+    <None Include="recursos\svg\layer-group.svg" />
+    <None Include="recursos\svg\leaf.svg" />
+    <None Include="recursos\svg\lemon.svg" />
+    <None Include="recursos\svg\less-than-equal.svg" />
+    <None Include="recursos\svg\less-than.svg" />
+    <None Include="recursos\svg\level-down-alt.svg" />
+    <None Include="recursos\svg\level-up-alt.svg" />
+    <None Include="recursos\svg\life-ring.svg" />
+    <None Include="recursos\svg\lightbulb.svg" />
+    <None Include="recursos\svg\link.svg" />
+    <None Include="recursos\svg\lira-sign.svg" />
+    <None Include="recursos\svg\list-alt.svg" />
+    <None Include="recursos\svg\list-ol.svg" />
+    <None Include="recursos\svg\list-ul.svg" />
+    <None Include="recursos\svg\list.svg" />
+    <None Include="recursos\svg\location-arrow.svg" />
+    <None Include="recursos\svg\lock-open.svg" />
+    <None Include="recursos\svg\lock.svg" />
+    <None Include="recursos\svg\long-arrow-alt-down.svg" />
+    <None Include="recursos\svg\long-arrow-alt-left.svg" />
+    <None Include="recursos\svg\long-arrow-alt-right.svg" />
+    <None Include="recursos\svg\long-arrow-alt-up.svg" />
+    <None Include="recursos\svg\low-vision.svg" />
+    <None Include="recursos\svg\luggage-cart.svg" />
+    <None Include="recursos\svg\lungs-virus.svg" />
+    <None Include="recursos\svg\lungs.svg" />
+    <None Include="recursos\svg\magic.svg" />
+    <None Include="recursos\svg\magnet.svg" />
+    <None Include="recursos\svg\mail-bulk.svg" />
+    <None Include="recursos\svg\male.svg" />
+    <None Include="recursos\svg\map-marked-alt.svg" />
+    <None Include="recursos\svg\map-marked.svg" />
+    <None Include="recursos\svg\map-marker-alt.svg" />
+    <None Include="recursos\svg\map-marker.svg" />
+    <None Include="recursos\svg\map-pin.svg" />
+    <None Include="recursos\svg\map-signs.svg" />
+    <None Include="recursos\svg\map.svg" />
+    <None Include="recursos\svg\marker.svg" />
+    <None Include="recursos\svg\mars-double.svg" />
+    <None Include="recursos\svg\mars-stroke-h.svg" />
+    <None Include="recursos\svg\mars-stroke-v.svg" />
+    <None Include="recursos\svg\mars-stroke.svg" />
+    <None Include="recursos\svg\mars.svg" />
+    <None Include="recursos\svg\mask.svg" />
+    <None Include="recursos\svg\medal.svg" />
+    <None Include="recursos\svg\medkit.svg" />
+    <None Include="recursos\svg\meh-blank.svg" />
+    <None Include="recursos\svg\meh-rolling-eyes.svg" />
+    <None Include="recursos\svg\meh.svg" />
+    <None Include="recursos\svg\memory.svg" />
+    <None Include="recursos\svg\menorah.svg" />
+    <None Include="recursos\svg\mercury.svg" />
+    <None Include="recursos\svg\meteor.svg" />
+    <None Include="recursos\svg\microchip.svg" />
+    <None Include="recursos\svg\microphone-alt-slash.svg" />
+    <None Include="recursos\svg\microphone-alt.svg" />
+    <None Include="recursos\svg\microphone-slash.svg" />
+    <None Include="recursos\svg\microphone.svg" />
+    <None Include="recursos\svg\microscope.svg" />
+    <None Include="recursos\svg\minus-circle.svg" />
+    <None Include="recursos\svg\minus-square.svg" />
+    <None Include="recursos\svg\minus.svg" />
+    <None Include="recursos\svg\mitten.svg" />
+    <None Include="recursos\svg\mobile-alt.svg" />
+    <None Include="recursos\svg\mobile.svg" />
+    <None Include="recursos\svg\money-bill-alt.svg" />
+    <None Include="recursos\svg\money-bill-wave-alt.svg" />
+    <None Include="recursos\svg\money-bill-wave.svg" />
+    <None Include="recursos\svg\money-bill.svg" />
+    <None Include="recursos\svg\money-check-alt.svg" />
+    <None Include="recursos\svg\money-check.svg" />
+    <None Include="recursos\svg\monument.svg" />
+    <None Include="recursos\svg\moon.svg" />
+    <None Include="recursos\svg\mortar-pestle.svg" />
+    <None Include="recursos\svg\mosque.svg" />
+    <None Include="recursos\svg\motorcycle.svg" />
+    <None Include="recursos\svg\mountain.svg" />
+    <None Include="recursos\svg\mouse-pointer.svg" />
+    <None Include="recursos\svg\mouse.svg" />
+    <None Include="recursos\svg\mug-hot.svg" />
+    <None Include="recursos\svg\music.svg" />
+    <None Include="recursos\svg\network-wired.svg" />
+    <None Include="recursos\svg\neuter.svg" />
+    <None Include="recursos\svg\newspaper.svg" />
+    <None Include="recursos\svg\not-equal.svg" />
+    <None Include="recursos\svg\notes-medical.svg" />
+    <None Include="recursos\svg\object-group.svg" />
+    <None Include="recursos\svg\object-ungroup.svg" />
+    <None Include="recursos\svg\oil-can.svg" />
+    <None Include="recursos\svg\om.svg" />
+    <None Include="recursos\svg\otter.svg" />
+    <None Include="recursos\svg\outdent.svg" />
+    <None Include="recursos\svg\pager.svg" />
+    <None Include="recursos\svg\paint-brush.svg" />
+    <None Include="recursos\svg\paint-roller.svg" />
+    <None Include="recursos\svg\palette.svg" />
+    <None Include="recursos\svg\pallet.svg" />
+    <None Include="recursos\svg\paper-plane.svg" />
+    <None Include="recursos\svg\paperclip.svg" />
+    <None Include="recursos\svg\parachute-box.svg" />
+    <None Include="recursos\svg\paragraph.svg" />
+    <None Include="recursos\svg\parking.svg" />
+    <None Include="recursos\svg\passport.svg" />
+    <None Include="recursos\svg\pastafarianism.svg" />
+    <None Include="recursos\svg\paste.svg" />
+    <None Include="recursos\svg\pause-circle.svg" />
+    <None Include="recursos\svg\pause.svg" />
+    <None Include="recursos\svg\paw.svg" />
+    <None Include="recursos\svg\peace.svg" />
+    <None Include="recursos\svg\pen-alt.svg" />
+    <None Include="recursos\svg\pen-fancy.svg" />
+    <None Include="recursos\svg\pen-nib.svg" />
+    <None Include="recursos\svg\pen-square.svg" />
+    <None Include="recursos\svg\pen.svg" />
+    <None Include="recursos\svg\pencil-alt.svg" />
+    <None Include="recursos\svg\pencil-ruler.svg" />
+    <None Include="recursos\svg\people-arrows.svg" />
+    <None Include="recursos\svg\people-carry.svg" />
+    <None Include="recursos\svg\pepper-hot.svg" />
+    <None Include="recursos\svg\percent.svg" />
+    <None Include="recursos\svg\percentage.svg" />
+    <None Include="recursos\svg\person-booth.svg" />
+    <None Include="recursos\svg\phone-alt.svg" />
+    <None Include="recursos\svg\phone-slash.svg" />
+    <None Include="recursos\svg\phone-square-alt.svg" />
+    <None Include="recursos\svg\phone-square.svg" />
+    <None Include="recursos\svg\phone-volume.svg" />
+    <None Include="recursos\svg\phone.svg" />
+    <None Include="recursos\svg\photo-video.svg" />
+    <None Include="recursos\svg\piggy-bank.svg" />
+    <None Include="recursos\svg\pills.svg" />
+    <None Include="recursos\svg\pizza-slice.svg" />
+    <None Include="recursos\svg\place-of-worship.svg" />
+    <None Include="recursos\svg\plane-arrival.svg" />
+    <None Include="recursos\svg\plane-departure.svg" />
+    <None Include="recursos\svg\plane-slash.svg" />
+    <None Include="recursos\svg\plane.svg" />
+    <None Include="recursos\svg\play-circle.svg" />
+    <None Include="recursos\svg\play.svg" />
+    <None Include="recursos\svg\plug.svg" />
+    <None Include="recursos\svg\plus-circle.svg" />
+    <None Include="recursos\svg\plus-square.svg" />
+    <None Include="recursos\svg\plus.svg" />
+    <None Include="recursos\svg\podcast.svg" />
+    <None Include="recursos\svg\poll-h.svg" />
+    <None Include="recursos\svg\poll.svg" />
+    <None Include="recursos\svg\poo-storm.svg" />
+    <None Include="recursos\svg\poo.svg" />
+    <None Include="recursos\svg\poop.svg" />
+    <None Include="recursos\svg\portrait.svg" />
+    <None Include="recursos\svg\pound-sign.svg" />
+    <None Include="recursos\svg\power-off.svg" />
+    <None Include="recursos\svg\pray.svg" />
+    <None Include="recursos\svg\praying-hands.svg" />
+    <None Include="recursos\svg\prescription-bottle-alt.svg" />
+    <None Include="recursos\svg\prescription-bottle.svg" />
+    <None Include="recursos\svg\prescription.svg" />
+    <None Include="recursos\svg\print.svg" />
+    <None Include="recursos\svg\procedures.svg" />
+    <None Include="recursos\svg\project-diagram.svg" />
+    <None Include="recursos\svg\pump-medical.svg" />
+    <None Include="recursos\svg\pump-soap.svg" />
+    <None Include="recursos\svg\puzzle-piece.svg" />
+    <QtRcc Include="qml.qrc">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qml</InitFuncName><InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qml</InitFuncName></QtRcc>
+    <None Include="recursos\svg\qrcode.svg" />
+    <None Include="qtquickcontrols2.conf" />
+    <None Include="recursos\svg\question-circle.svg" />
+    <None Include="recursos\svg\question.svg" />
+    <None Include="recursos\svg\quidditch.svg" />
+    <None Include="recursos\svg\quote-left.svg" />
+    <None Include="recursos\svg\quote-right.svg" />
+    <None Include="recursos\svg\quran.svg" />
+    <None Include="recursos\svg\radiation-alt.svg" />
+    <None Include="recursos\svg\radiation.svg" />
+    <None Include="recursos\svg\rainbow.svg" />
+    <None Include="recursos\svg\random.svg" />
+    <None Include="recursos\svg\receipt.svg" />
+    <None Include="recursos\svg\record-vinyl.svg" />
+    <QtRcc Include="recursos\recursos.qrc">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">recursos</InitFuncName><InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">recursos</InitFuncName></QtRcc>
+    <None Include="recursos\svg\recycle.svg" />
+    <None Include="recursos\svg\redo-alt.svg" />
+    <None Include="recursos\svg\redo.svg" />
+    <None Include="recursos\svg\registered.svg" />
+    <None Include="recursos\svg\remove-format.svg" />
+    <None Include="recursos\svg\reply-all.svg" />
+    <None Include="recursos\svg\reply.svg" />
+    <None Include="recursos\svg\republican.svg" />
+    <None Include="recursos\svg\restroom.svg" />
+    <None Include="recursos\svg\retweet.svg" />
+    <None Include="recursos\svg\ribbon.svg" />
+    <None Include="recursos\svg\ring.svg" />
+    <None Include="recursos\svg\road.svg" />
+    <None Include="recursos\svg\robot.svg" />
+    <None Include="recursos\svg\rocket.svg" />
+    <None Include="recursos\svg\route.svg" />
+    <None Include="recursos\svg\rss-square.svg" />
+    <None Include="recursos\svg\rss.svg" />
+    <None Include="recursos\svg\ruble-sign.svg" />
+    <None Include="recursos\svg\ruler-combined.svg" />
+    <None Include="recursos\svg\ruler-horizontal.svg" />
+    <None Include="recursos\svg\ruler-vertical.svg" />
+    <None Include="recursos\svg\ruler.svg" />
+    <None Include="recursos\svg\running.svg" />
+    <None Include="recursos\svg\rupee-sign.svg" />
+    <None Include="recursos\svg\sad-cry.svg" />
+    <None Include="recursos\svg\sad-tear.svg" />
+    <None Include="recursos\svg\satellite-dish.svg" />
+    <None Include="recursos\svg\satellite.svg" />
+    <None Include="recursos\svg\save.svg" />
+    <None Include="recursos\svg\school.svg" />
+    <None Include="recursos\svg\screwdriver.svg" />
+    <None Include="recursos\svg\scroll.svg" />
+    <None Include="recursos\svg\sd-card.svg" />
+    <None Include="recursos\svg\search-dollar.svg" />
+    <None Include="recursos\svg\search-location.svg" />
+    <None Include="recursos\svg\search-minus.svg" />
+    <None Include="recursos\svg\search-plus.svg" />
+    <None Include="recursos\svg\search.svg" />
+    <None Include="recursos\svg\seedling.svg" />
+    <None Include="recursos\svg\server.svg" />
+    <None Include="recursos\svg\shapes.svg" />
+    <None Include="recursos\svg\share-alt-square.svg" />
+    <None Include="recursos\svg\share-alt.svg" />
+    <None Include="recursos\svg\share-square.svg" />
+    <None Include="recursos\svg\share.svg" />
+    <None Include="recursos\svg\shekel-sign.svg" />
+    <None Include="recursos\svg\shield-alt.svg" />
+    <None Include="recursos\svg\shield-virus.svg" />
+    <None Include="recursos\svg\ship.svg" />
+    <None Include="recursos\svg\shipping-fast.svg" />
+    <None Include="recursos\svg\shoe-prints.svg" />
+    <None Include="recursos\svg\shopping-bag.svg" />
+    <None Include="recursos\svg\shopping-basket.svg" />
+    <None Include="recursos\svg\shopping-cart.svg" />
+    <None Include="recursos\svg\shower.svg" />
+    <None Include="recursos\svg\shuttle-van.svg" />
+    <None Include="recursos\svg\sign-in-alt.svg" />
+    <None Include="recursos\svg\sign-language.svg" />
+    <None Include="recursos\svg\sign-out-alt.svg" />
+    <None Include="recursos\svg\sign.svg" />
+    <None Include="recursos\svg\signal.svg" />
+    <None Include="recursos\svg\signature.svg" />
+    <None Include="recursos\svg\sim-card.svg" />
+    <None Include="recursos\svg\sink.svg" />
+    <None Include="recursos\svg\sitemap.svg" />
+    <None Include="recursos\svg\skating.svg" />
+    <None Include="recursos\svg\skiing-nordic.svg" />
+    <None Include="recursos\svg\skiing.svg" />
+    <None Include="recursos\svg\skull-crossbones.svg" />
+    <None Include="recursos\svg\skull.svg" />
+    <None Include="recursos\svg\slash.svg" />
+    <None Include="recursos\svg\sleigh.svg" />
+    <None Include="recursos\svg\sliders-h.svg" />
+    <None Include="recursos\svg\smile-beam.svg" />
+    <None Include="recursos\svg\smile-wink.svg" />
+    <None Include="recursos\svg\smile.svg" />
+    <None Include="recursos\svg\smog.svg" />
+    <None Include="recursos\svg\smoking-ban.svg" />
+    <None Include="recursos\svg\smoking.svg" />
+    <None Include="recursos\svg\sms.svg" />
+    <None Include="recursos\svg\snowboarding.svg" />
+    <None Include="recursos\svg\snowflake.svg" />
+    <None Include="recursos\svg\snowman.svg" />
+    <None Include="recursos\svg\snowplow.svg" />
+    <None Include="recursos\svg\soap.svg" />
+    <None Include="recursos\svg\socks.svg" />
+    <None Include="recursos\svg\solar-panel.svg" />
+    <None Include="recursos\svg\sort-alpha-down-alt.svg" />
+    <None Include="recursos\svg\sort-alpha-down.svg" />
+    <None Include="recursos\svg\sort-alpha-up-alt.svg" />
+    <None Include="recursos\svg\sort-alpha-up.svg" />
+    <None Include="recursos\svg\sort-amount-down-alt.svg" />
+    <None Include="recursos\svg\sort-amount-down.svg" />
+    <None Include="recursos\svg\sort-amount-up-alt.svg" />
+    <None Include="recursos\svg\sort-amount-up.svg" />
+    <None Include="recursos\svg\sort-down.svg" />
+    <None Include="recursos\svg\sort-numeric-down-alt.svg" />
+    <None Include="recursos\svg\sort-numeric-down.svg" />
+    <None Include="recursos\svg\sort-numeric-up-alt.svg" />
+    <None Include="recursos\svg\sort-numeric-up.svg" />
+    <None Include="recursos\svg\sort-up.svg" />
+    <None Include="recursos\svg\sort.svg" />
+    <None Include="recursos\svg\spa.svg" />
+    <None Include="recursos\svg\space-shuttle.svg" />
+    <None Include="recursos\svg\spell-check.svg" />
+    <None Include="recursos\svg\spider.svg" />
+    <None Include="recursos\svg\spinner.svg" />
+    <None Include="recursos\svg\splotch.svg" />
+    <None Include="recursos\svg\spray-can.svg" />
+    <None Include="recursos\svg\square-full.svg" />
+    <None Include="recursos\svg\square-root-alt.svg" />
+    <None Include="recursos\svg\square.svg" />
+    <None Include="recursos\svg\stamp.svg" />
+    <None Include="recursos\svg\star-and-crescent.svg" />
+    <None Include="recursos\svg\star-half-alt.svg" />
+    <None Include="recursos\svg\star-half.svg" />
+    <None Include="recursos\svg\star-of-david.svg" />
+    <None Include="recursos\svg\star-of-life.svg" />
+    <None Include="recursos\svg\star.svg" />
+    <None Include="recursos\svg\step-backward.svg" />
+    <None Include="recursos\svg\step-forward.svg" />
+    <None Include="recursos\svg\stethoscope.svg" />
+    <None Include="recursos\svg\sticky-note.svg" />
+    <None Include="recursos\svg\stop-circle.svg" />
+    <None Include="recursos\svg\stop.svg" />
+    <None Include="recursos\svg\stopwatch-20.svg" />
+    <None Include="recursos\svg\stopwatch.svg" />
+    <None Include="recursos\svg\store-alt-slash.svg" />
+    <None Include="recursos\svg\store-alt.svg" />
+    <None Include="recursos\svg\store-slash.svg" />
+    <None Include="recursos\svg\store.svg" />
+    <None Include="recursos\svg\stream.svg" />
+    <None Include="recursos\svg\street-view.svg" />
+    <None Include="recursos\svg\strikethrough.svg" />
+    <None Include="recursos\svg\stroopwafel.svg" />
+    <None Include="recursos\svg\subscript.svg" />
+    <None Include="recursos\svg\subway.svg" />
+    <None Include="recursos\svg\suitcase-rolling.svg" />
+    <None Include="recursos\svg\suitcase.svg" />
+    <None Include="recursos\svg\sun.svg" />
+    <None Include="recursos\svg\superscript.svg" />
+    <None Include="recursos\svg\surprise.svg" />
+    <None Include="recursos\svg\swatchbook.svg" />
+    <None Include="recursos\svg\swimmer.svg" />
+    <None Include="recursos\svg\swimming-pool.svg" />
+    <None Include="recursos\svg\synagogue.svg" />
+    <None Include="recursos\svg\sync-alt.svg" />
+    <None Include="recursos\svg\sync.svg" />
+    <None Include="recursos\svg\syringe.svg" />
+    <None Include="recursos\svg\table-tennis.svg" />
+    <None Include="recursos\svg\table.svg" />
+    <None Include="recursos\svg\tablet-alt.svg" />
+    <None Include="recursos\svg\tablet.svg" />
+    <None Include="recursos\svg\tablets.svg" />
+    <None Include="recursos\svg\tachometer-alt.svg" />
+    <None Include="recursos\svg\tag.svg" />
+    <None Include="recursos\svg\tags.svg" />
+    <None Include="recursos\svg\tape.svg" />
+    <None Include="recursos\svg\tasks.svg" />
+    <None Include="recursos\svg\taxi.svg" />
+    <None Include="recursos\svg\teeth-open.svg" />
+    <None Include="recursos\svg\teeth.svg" />
+    <None Include="recursos\svg\temperature-high.svg" />
+    <None Include="recursos\svg\temperature-low.svg" />
+    <None Include="recursos\svg\tenge.svg" />
+    <None Include="recursos\svg\terminal.svg" />
+    <None Include="recursos\svg\text-height.svg" />
+    <None Include="recursos\svg\text-width.svg" />
+    <None Include="recursos\svg\th-large.svg" />
+    <None Include="recursos\svg\th-list.svg" />
+    <None Include="recursos\svg\th.svg" />
+    <None Include="recursos\svg\theater-masks.svg" />
+    <None Include="recursos\svg\thermometer-empty.svg" />
+    <None Include="recursos\svg\thermometer-full.svg" />
+    <None Include="recursos\svg\thermometer-half.svg" />
+    <None Include="recursos\svg\thermometer-quarter.svg" />
+    <None Include="recursos\svg\thermometer-three-quarters.svg" />
+    <None Include="recursos\svg\thermometer.svg" />
+    <None Include="recursos\svg\thumbs-down.svg" />
+    <None Include="recursos\svg\thumbs-up.svg" />
+    <None Include="recursos\svg\thumbtack.svg" />
+    <None Include="recursos\svg\ticket-alt.svg" />
+    <None Include="recursos\svg\times-circle.svg" />
+    <None Include="recursos\svg\times.svg" />
+    <None Include="recursos\svg\tint-slash.svg" />
+    <None Include="recursos\svg\tint.svg" />
+    <None Include="recursos\svg\tired.svg" />
+    <None Include="recursos\png\todus.png" />
+    <None Include="recursos\svg\toggle-off.svg" />
+    <None Include="recursos\svg\toggle-on.svg" />
+    <None Include="recursos\svg\toilet-paper-slash.svg" />
+    <None Include="recursos\svg\toilet-paper.svg" />
+    <None Include="recursos\svg\toilet.svg" />
+    <None Include="recursos\svg\toolbox.svg" />
+    <None Include="recursos\svg\tools.svg" />
+    <None Include="recursos\svg\tooth.svg" />
+    <None Include="recursos\svg\torah.svg" />
+    <None Include="recursos\svg\torii-gate.svg" />
+    <None Include="recursos\svg\tractor.svg" />
+    <None Include="recursos\svg\trademark.svg" />
+    <None Include="recursos\svg\traffic-light.svg" />
+    <None Include="recursos\svg\trailer.svg" />
+    <None Include="recursos\svg\train.svg" />
+    <None Include="recursos\svg\tram.svg" />
+    <None Include="recursos\svg\transgender-alt.svg" />
+    <None Include="recursos\svg\transgender.svg" />
+    <None Include="recursos\svg\trash-alt.svg" />
+    <None Include="recursos\svg\trash-restore-alt.svg" />
+    <None Include="recursos\svg\trash-restore.svg" />
+    <None Include="recursos\svg\trash.svg" />
+    <None Include="recursos\svg\tree.svg" />
+    <None Include="recursos\svg\trophy.svg" />
+    <None Include="recursos\svg\truck-loading.svg" />
+    <None Include="recursos\svg\truck-monster.svg" />
+    <None Include="recursos\svg\truck-moving.svg" />
+    <None Include="recursos\svg\truck-pickup.svg" />
+    <None Include="recursos\svg\truck.svg" />
+    <None Include="recursos\svg\tshirt.svg" />
+    <None Include="recursos\svg\tty.svg" />
+    <None Include="recursos\svg\tv.svg" />
+    <None Include="recursos\svg\umbrella-beach.svg" />
+    <None Include="recursos\svg\umbrella.svg" />
+    <None Include="recursos\svg\underline.svg" />
+    <None Include="recursos\svg\undo-alt.svg" />
+    <None Include="recursos\svg\undo.svg" />
+    <None Include="recursos\svg\universal-access.svg" />
+    <None Include="recursos\svg\university.svg" />
+    <None Include="recursos\svg\unlink.svg" />
+    <None Include="recursos\svg\unlock-alt.svg" />
+    <None Include="recursos\svg\unlock.svg" />
+    <None Include="recursos\svg\upload.svg" />
+    <None Include="recursos\svg\user-alt-slash.svg" />
+    <None Include="recursos\svg\user-alt.svg" />
+    <None Include="recursos\svg\user-astronaut.svg" />
+    <None Include="recursos\svg\user-check.svg" />
+    <None Include="recursos\svg\user-circle.svg" />
+    <None Include="recursos\svg\user-clock.svg" />
+    <None Include="recursos\svg\user-cog.svg" />
+    <None Include="recursos\svg\user-edit.svg" />
+    <None Include="recursos\svg\user-friends.svg" />
+    <None Include="recursos\svg\user-graduate.svg" />
+    <None Include="recursos\svg\user-injured.svg" />
+    <None Include="recursos\svg\user-lock.svg" />
+    <None Include="recursos\svg\user-md.svg" />
+    <None Include="recursos\svg\user-minus.svg" />
+    <None Include="recursos\svg\user-ninja.svg" />
+    <None Include="recursos\svg\user-nurse.svg" />
+    <None Include="recursos\svg\user-plus.svg" />
+    <None Include="recursos\svg\user-secret.svg" />
+    <None Include="recursos\svg\user-shield.svg" />
+    <None Include="recursos\svg\user-slash.svg" />
+    <None Include="recursos\svg\user-tag.svg" />
+    <None Include="recursos\svg\user-tie.svg" />
+    <None Include="recursos\svg\user-times.svg" />
+    <None Include="recursos\svg\user.svg" />
+    <None Include="recursos\svg\users-cog.svg" />
+    <None Include="recursos\svg\users-slash.svg" />
+    <None Include="recursos\svg\users.svg" />
+    <None Include="recursos\svg\utensil-spoon.svg" />
+    <None Include="recursos\svg\utensils.svg" />
+    <None Include="recursos\svg\vector-square.svg" />
+    <None Include="recursos\svg\venus-double.svg" />
+    <None Include="recursos\svg\venus-mars.svg" />
+    <None Include="recursos\svg\venus.svg" />
+    <None Include="recursos\svg\vest-patches.svg" />
+    <None Include="recursos\svg\vest.svg" />
+    <None Include="recursos\svg\vial.svg" />
+    <None Include="recursos\svg\vials.svg" />
+    <None Include="recursos\svg\video-slash.svg" />
+    <None Include="recursos\svg\video.svg" />
+    <None Include="recursos\svg\vihara.svg" />
+    <None Include="recursos\svg\virus-slash.svg" />
+    <None Include="recursos\svg\virus.svg" />
+    <None Include="recursos\svg\viruses.svg" />
+    <None Include="recursos\svg\voicemail.svg" />
+    <None Include="recursos\svg\volleyball-ball.svg" />
+    <None Include="recursos\svg\volume-down.svg" />
+    <None Include="recursos\svg\volume-mute.svg" />
+    <None Include="recursos\svg\volume-off.svg" />
+    <None Include="recursos\svg\volume-up.svg" />
+    <None Include="recursos\svg\vote-yea.svg" />
+    <None Include="recursos\svg\vr-cardboard.svg" />
+    <None Include="recursos\svg\walking.svg" />
+    <None Include="recursos\svg\wallet.svg" />
+    <None Include="recursos\svg\warehouse.svg" />
+    <None Include="recursos\svg\water.svg" />
+    <None Include="recursos\svg\wave-square.svg" />
+    <None Include="recursos\svg\weight-hanging.svg" />
+    <None Include="recursos\svg\weight.svg" />
+    <None Include="recursos\svg\wheelchair.svg" />
+    <None Include="recursos\svg\wifi.svg" />
+    <None Include="recursos\svg\wind.svg" />
+    <None Include="recursos\svg\window-close.svg" />
+    <None Include="recursos\svg\window-maximize.svg" />
+    <None Include="recursos\svg\window-minimize.svg" />
+    <None Include="recursos\svg\window-restore.svg" />
+    <None Include="recursos\svg\wine-bottle.svg" />
+    <None Include="recursos\svg\wine-glass-alt.svg" />
+    <None Include="recursos\svg\wine-glass.svg" />
+    <None Include="recursos\svg\won-sign.svg" />
+    <None Include="recursos\svg\wrench.svg" />
+    <None Include="recursos\svg\x-ray.svg" />
+    <None Include="recursos\svg\yen-sign.svg" />
+    <None Include="recursos\svg\yin-yang.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include=".\atds3_resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" /><ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')"><Import Project="$(QtMsBuild)\qt.targets" /></ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
