@@ -122,14 +122,14 @@ android {
 windows {
 	contains(QMAKE_HOST.arch, x86_64) {
 		INCLUDEPATH +=	C:/Qt/vcpkg/installed/x64-windows/include
-		LIBS += -LC:/Qt/vcpkg/installed/x64-windows/lib -lprotobuf
+		LIBS += -LC:/Qt/vcpkg/installed/x64-windows/lib -llibprotobuf
 	} else {
 		DEFINES += PROTOBUF_USE_DLLS
 		INCLUDEPATH +=	C:/msys64/mingw32/include
 		LIBS += -LC:/msys64/mingw32/lib -lprotobuf
 	}
 
-	LIBS += -lpowrprof -lssl -lcrypto
+	LIBS += -lpowrprof -llibssl -llibcrypto
 }
 
 target.path = $${QMAKE_INSTALL_PREFIX}/bin
